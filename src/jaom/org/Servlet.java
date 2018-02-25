@@ -31,10 +31,10 @@ public class Servlet extends HttpServlet {
 		JSONObject json = new JSONObject();
 		
 		if(request.getHeader("Origin")!=null) {
-			json.put("status", 200).put("msg", "OK, This CORS filtered");	
+			json.put("status", 200).put("msg", "GET OK, This CORS filtered");	
 		}
 		else {
-			json.put("status", 200).put("msg", "OK, this is not CORS filtered");
+			json.put("status", 200).put("msg", "GET OK, this is not CORS filtered");
 		}
 		response.getWriter().print(json.toString());
 	}
@@ -43,7 +43,15 @@ public class Servlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+		JSONObject json = new JSONObject();
+		
+		if(request.getHeader("Origin")!=null) {
+			json.put("status", 200).put("msg", "POST OK, This CORS filtered");	
+		}
+		else {
+			json.put("status", 200).put("msg", "POST OK, this is not CORS filtered");
+		}
+		response.getWriter().print(json.toString());
 	}
 
 }
