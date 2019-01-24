@@ -1,4 +1,4 @@
-package jaom.org;
+package jaom.org.filters;
 
 import java.io.IOException;
 
@@ -15,28 +15,25 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet Filter implementation class MyFilter
  */
-@WebFilter("/*")
+@WebFilter(urlPatterns = "/*",filterName = "CORSFilter")
 public class MyFilter implements Filter {
 
     /**
      * Default constructor. 
      */
     public MyFilter() {
-        // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see Filter#destroy()
 	 */
 	public void destroy() {
-		// TODO Auto-generated method stub
 	}
 
 	/**
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
 	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
-		// TODO Auto-generated method stub'
 		HttpServletResponse response = (HttpServletResponse) res;
 		HttpServletRequest request = (HttpServletRequest) req;
 		
@@ -56,7 +53,6 @@ public class MyFilter implements Filter {
 	 * @see Filter#init(FilterConfig)
 	 */
 	public void init(FilterConfig fConfig) throws ServletException {
-		// TODO Auto-generated method stub
 	}
 
 }

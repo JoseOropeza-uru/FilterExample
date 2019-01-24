@@ -1,4 +1,6 @@
-package jaom.org;
+package jaom.org.listeners;
+
+import jaom.org.utils.PropertiesReader;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -15,22 +17,20 @@ public class MyListener implements ServletContextListener {
      * Default constructor. 
      */
     public MyListener() {
-        // TODO Auto-generated constructor stub
     }
 
     /**
      * @see ServletContextListener#contextInitialized(ServletContextEvent)
      */
     public void contextInitialized(ServletContextEvent arg0)  { 
-    	// TODO Auto-generated method stub
     	//Logic necessary for WebApplication startup
+        PropertiesReader.getInstance();
     }
 
     /**
      * @see ServletContextListener#contextDestroyed(ServletContextEvent)
      */
     public void contextDestroyed(ServletContextEvent arg0)  { 
-         // TODO Auto-generated method stub
     	//Logic necessary for WebApplication finish
     }
 

@@ -1,4 +1,4 @@
-package jaom.org;
+package jaom.org.servlets;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -12,7 +12,7 @@ import org.json.JSONObject;
 /**
  * Servlet implementation class Servlet
  */
-@WebServlet("/Servlet")
+@WebServlet(urlPatterns = "/Servlet",name = "Servlet")
 public class Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -21,7 +21,6 @@ public class Servlet extends HttpServlet {
      */
     public Servlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
